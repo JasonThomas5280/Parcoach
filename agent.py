@@ -27,6 +27,7 @@ from livekit.agents import Agent, AgentSession, JobContext, RoomInputOptions
 from livekit.plugins import anthropic, cartesia, deepgram, silero
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 
+from config import get_settings
 from memory.store import load_context, save_session
 from memory.summarize import summarize_call
 from prompts.system_prompt import build_instructions
@@ -35,8 +36,6 @@ from safety.guardrails import crisis_instruction, screen
 load_dotenv()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("parcoach")
-
-REALTIME_MODEL = "claude-sonnet-4-6"
 
 
 class CoachAgent(Agent):
@@ -86,6 +85,9 @@ def prewarm(proc: agents.JobProcess) -> None:
 
 
 async def entrypoint(ctx: JobContext) -> None:
+    # Fail fast if any required secret is missing before we answer a call.
+    settings = get_settings()
+
     await ctx.connect()
 
     family = load_context()
@@ -93,7 +95,7 @@ async def entrypoint(ctx: JobContext) -> None:
 
     session = AgentSession(
         stt=deepgram.STT(model="nova-3"),
-        llm=anthropic.LLM(model=REALTIME_MODEL),
+        llm=anthropic.LLM(model=settings.realtime_model),
         tts=cartesia.TTS(),
         vad=ctx.proc.userdata.get("vad") or silero.VAD.load(),
         turn_detection=MultilingualModel(),

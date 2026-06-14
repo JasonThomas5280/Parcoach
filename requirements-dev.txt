@@ -1,0 +1,7 @@
+# Lightweight, hermetic deps for tests + lint (no heavy livekit/voice stack).
+# CI installs these; the tested modules (prompts, memory, safety) don't import livekit.
+anthropic>=0.69.0
+pydantic>=2.0
+pydantic-settings>=2.0
+ruff>=0.6
+pytest>=8.0
