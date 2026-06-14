@@ -1,0 +1,296 @@
+{
+  "id": "everyday",
+  "version": 1,
+  "title": "Everyday Things",
+  "ageBand": "18-36m",
+  "items": [
+    {
+      "id": "dog",
+      "label": "Dog",
+      "image": "dog.svg",
+      "sound": "bark",
+      "animation": "wag",
+      "coPlayPrompt": "Say it together: 'Dog!' Woof woof!",
+      "realWorldBridge": "Go find a dog together — a real one, a photo, or a toy — and say 'dog.'",
+      "tags": [
+        "animals"
+      ]
+    },
+    {
+      "id": "cat",
+      "label": "Cat",
+      "image": "cat.svg",
+      "sound": "meow",
+      "animation": "peek",
+      "coPlayPrompt": "Point and say 'Cat.' Can you say 'meow'?",
+      "realWorldBridge": "Look for a cat outside or in a book and say 'cat' together.",
+      "tags": [
+        "animals"
+      ]
+    },
+    {
+      "id": "cow",
+      "label": "Cow",
+      "image": "cow.svg",
+      "sound": "moo",
+      "animation": "bounce",
+      "coPlayPrompt": "Say 'Cow!' A cow says 'moooo.'",
+      "realWorldBridge": "Find a cow in a book or a toy and moo together.",
+      "tags": [
+        "animals"
+      ]
+    },
+    {
+      "id": "duck",
+      "label": "Duck",
+      "image": "duck.svg",
+      "sound": "quack",
+      "animation": "bounce",
+      "coPlayPrompt": "'Duck!' Quack quack!",
+      "realWorldBridge": "Find some water and pretend to be ducks — 'quack!'",
+      "tags": [
+        "animals"
+      ]
+    },
+    {
+      "id": "bird",
+      "label": "Bird",
+      "image": "bird.svg",
+      "sound": "tweet",
+      "animation": "peek",
+      "coPlayPrompt": "'Bird!' Birds say 'tweet.'",
+      "realWorldBridge": "Go to a window and listen for a real bird together.",
+      "tags": [
+        "animals"
+      ]
+    },
+    {
+      "id": "fish",
+      "label": "Fish",
+      "image": "fish.svg",
+      "sound": "splash",
+      "animation": "wag",
+      "coPlayPrompt": "'Fish!' Splash splash!",
+      "realWorldBridge": "Find a fish in a book or pretend to swim like a fish.",
+      "tags": [
+        "animals"
+      ]
+    },
+    {
+      "id": "apple",
+      "label": "Apple",
+      "image": "apple.svg",
+      "sound": "crunch",
+      "animation": "bounce",
+      "coPlayPrompt": "'Apple!' Crunch crunch.",
+      "realWorldBridge": "Find a real apple in the kitchen and hold it together.",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "banana",
+      "label": "Banana",
+      "image": "banana.svg",
+      "sound": "pop",
+      "animation": "wag",
+      "coPlayPrompt": "'Banana!' It's yellow.",
+      "realWorldBridge": "Find a banana and peel it together.",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "bread",
+      "label": "Bread",
+      "image": "bread.svg",
+      "sound": "crunch",
+      "animation": "bounce",
+      "coPlayPrompt": "'Bread!' Yum.",
+      "realWorldBridge": "Find some bread in your kitchen and name it together.",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "milk",
+      "label": "Milk",
+      "image": "milk.svg",
+      "sound": "pop",
+      "animation": "bounce",
+      "coPlayPrompt": "'Milk!' Glug glug.",
+      "realWorldBridge": "Pour a little milk together and say 'milk.'",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "carrot",
+      "label": "Carrot",
+      "image": "carrot.svg",
+      "sound": "crunch",
+      "animation": "peek",
+      "coPlayPrompt": "'Carrot!' It's orange.",
+      "realWorldBridge": "Find a carrot in the fridge and crunch it together.",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "egg",
+      "label": "Egg",
+      "image": "egg.svg",
+      "sound": "crunch",
+      "animation": "bounce",
+      "coPlayPrompt": "'Egg!' So round.",
+      "realWorldBridge": "Find an egg in the kitchen and hold it gently together.",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "car",
+      "label": "Car",
+      "image": "car.svg",
+      "sound": "engine",
+      "animation": "bounce",
+      "coPlayPrompt": "'Car!' Vroom vroom.",
+      "realWorldBridge": "Look out a window for a real car and say 'car.'",
+      "tags": [
+        "vehicles"
+      ]
+    },
+    {
+      "id": "bus",
+      "label": "Bus",
+      "image": "bus.svg",
+      "sound": "horn",
+      "animation": "bounce",
+      "coPlayPrompt": "'Bus!' Beep beep.",
+      "realWorldBridge": "Watch for a bus together next time you go out.",
+      "tags": [
+        "vehicles"
+      ]
+    },
+    {
+      "id": "train",
+      "label": "Train",
+      "image": "train.svg",
+      "sound": "chug",
+      "animation": "bounce",
+      "coPlayPrompt": "'Train!' Choo choo!",
+      "realWorldBridge": "Find a train in a book or make a train with chairs.",
+      "tags": [
+        "vehicles"
+      ]
+    },
+    {
+      "id": "boat",
+      "label": "Boat",
+      "image": "boat.svg",
+      "sound": "horn",
+      "animation": "wag",
+      "coPlayPrompt": "'Boat!' It floats.",
+      "realWorldBridge": "Float a toy boat in the bath and say 'boat.'",
+      "tags": [
+        "vehicles"
+      ]
+    },
+    {
+      "id": "plane",
+      "label": "Plane",
+      "image": "plane.svg",
+      "sound": "whoosh",
+      "animation": "peek",
+      "coPlayPrompt": "'Plane!' Whoosh, up high.",
+      "realWorldBridge": "Look up at the sky together for a real plane.",
+      "tags": [
+        "vehicles"
+      ]
+    },
+    {
+      "id": "bike",
+      "label": "Bike",
+      "image": "bike.svg",
+      "sound": "ring",
+      "animation": "wag",
+      "coPlayPrompt": "'Bike!' Ring ring.",
+      "realWorldBridge": "Find a real bike and say 'bike' together.",
+      "tags": [
+        "vehicles"
+      ]
+    },
+    {
+      "id": "ball",
+      "label": "Ball",
+      "image": "ball.svg",
+      "sound": "pop",
+      "animation": "bounce",
+      "coPlayPrompt": "'Ball!' Bounce, bounce.",
+      "realWorldBridge": "Find a real ball and roll it back and forth together.",
+      "tags": [
+        "household"
+      ]
+    },
+    {
+      "id": "cup",
+      "label": "Cup",
+      "image": "cup.svg",
+      "sound": "clink",
+      "animation": "wag",
+      "coPlayPrompt": "'Cup!' We drink from a cup.",
+      "realWorldBridge": "Find your child's cup and say 'cup' together.",
+      "tags": [
+        "household"
+      ]
+    },
+    {
+      "id": "book",
+      "label": "Book",
+      "image": "book.svg",
+      "sound": "pop",
+      "animation": "peek",
+      "coPlayPrompt": "'Book!' Let's read.",
+      "realWorldBridge": "Go pick a real book and read one page together.",
+      "tags": [
+        "household"
+      ]
+    },
+    {
+      "id": "sock",
+      "label": "Sock",
+      "image": "sock.svg",
+      "sound": "pop",
+      "animation": "wag",
+      "coPlayPrompt": "'Sock!' On your foot.",
+      "realWorldBridge": "Find a pair of socks and put one on together.",
+      "tags": [
+        "household"
+      ]
+    },
+    {
+      "id": "clock",
+      "label": "Clock",
+      "image": "clock.svg",
+      "sound": "tick",
+      "animation": "peek",
+      "coPlayPrompt": "'Clock!' Tick tock.",
+      "realWorldBridge": "Find a real clock in your home and listen to it tick.",
+      "tags": [
+        "household"
+      ]
+    },
+    {
+      "id": "key",
+      "label": "Key",
+      "image": "key.svg",
+      "sound": "clink",
+      "animation": "wag",
+      "coPlayPrompt": "'Key!' Jingle jingle.",
+      "realWorldBridge": "Find your keys and jingle them together (gently!).",
+      "tags": [
+        "household"
+      ]
+    }
+  ]
+}
