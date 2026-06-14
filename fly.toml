@@ -1,0 +1,24 @@
+# Fly.io deployment for the Parcoach agent worker.
+#
+# This is an outbound worker — it connects to LiveKit Cloud and exposes no public ports,
+# so there is no [[services]]/[http_service] block.
+#
+# Secrets (NEVER commit these) are set with:
+#   fly secrets set ANTHROPIC_API_KEY=... DEEPGRAM_API_KEY=... CARTESIA_API_KEY=... \
+#                   LIVEKIT_URL=... LIVEKIT_API_KEY=... LIVEKIT_API_SECRET=... \
+#                   DATABASE_URL=postgres://...
+#
+# Use managed Postgres (Neon/Supabase) for DATABASE_URL so memory survives redeploys.
+
+app = "parcoach"
+primary_region = "iad"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[processes]
+  worker = "python agent.py start"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "1gb"
