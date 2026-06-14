@@ -73,6 +73,38 @@ Twilio number ──SIP──▶ LiveKit Cloud (media plane, free tier)
 Full step-by-step is in the build plan; LiveKit's "telephony / SIP inbound" docs cover the
 exact trunk + dispatch-rule fields.
 
+## Tests
+
+Hermetic unit tests (external services mocked — no keys needed):
+
+```bash
+pip install -r requirements-dev.txt
+python -m ruff check .
+python -m pytest
+```
+
+CI (`.github/workflows/ci.yml`) runs the same lint + tests on every push and PR.
+
+## Deploy (production)
+
+The agent is a long-running outbound worker (it dials LiveKit Cloud; no inbound ports). It is
+**not** hostable on GitHub Pages — Pages is static-only. Deploy the container to Fly.io
+(or Render):
+
+```bash
+fly launch --no-deploy            # uses the included fly.toml + Dockerfile
+fly secrets set \
+  ANTHROPIC_API_KEY=... DEEPGRAM_API_KEY=... CARTESIA_API_KEY=... \
+  LIVEKIT_URL=... LIVEKIT_API_KEY=... LIVEKIT_API_SECRET=... \
+  DATABASE_URL=postgres://...      # managed Postgres (Neon/Supabase) so memory survives redeploys
+fly deploy
+```
+
+- **Persistence:** set `DATABASE_URL` to managed Postgres in prod (containers are ephemeral).
+  With no `DATABASE_URL`, the app falls back to local SQLite (`PARCOACH_DB`) for dev.
+- **Config:** `config.py` validates required secrets at startup and fails fast if any are
+  missing, so a misconfigured deploy never silently runs.
+
 ## Test scenarios
 
 Call the number and try real situations: a toddler tantrum, a screen-time standoff, a
