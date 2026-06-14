@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: theme('colors.warm');
+    color: theme('colors.ink');
+    font-family: theme('fontFamily.sans');
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* Avoid text selection / long-press menus during toddler poking. */
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
+  }
+
+  /* Visible keyboard focus on parent controls (a11y floor). */
+  :focus-visible {
+    outline: 3px solid theme('colors.subject-pop');
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@layer utilities {
+  /* The idle "breath" that makes the subject feel touchable. */
+  .animate-breathe {
+    animation: breathe 4.5s ease-in-out infinite;
+  }
+
+  .safe-top {
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+  .safe-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}
+
+/* Honor reduced motion: neutralize keyframe MOVEMENT but deliberately keep
+   transitions alive, because the reduced-motion design is "swap transforms for
+   soft cross-fades, keep audio + reward feedback" (DESIGN_SYSTEM). Components
+   also gate motion via the useReducedMotion hook; this is the safety net. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
